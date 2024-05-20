@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-   count = 0
    printed_count = 0
 
    try:
@@ -10,7 +9,8 @@ def safe_print_list_integers(my_list=[], x=0):
             printed_count += 1
          except (ValueError, TypeError):
             continue
-   except IndexError:
-      pass
+   except IndexError as e:
+      print()
+      raise e
    print()
    return printed_count
