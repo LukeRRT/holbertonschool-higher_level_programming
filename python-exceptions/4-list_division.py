@@ -25,4 +25,7 @@ def list_division(my_list_1, my_list_2, list_length):
             result_list.append(0)
         else:
             result_list.append(result)
+        finally:
+            print("Finally block executed")
+
     return result_list
