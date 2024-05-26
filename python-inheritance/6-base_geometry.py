@@ -5,6 +5,12 @@ class BaseGeometry
 
 
 class BaseGeometry:
+    """
+    BaseGeometry class with a method to calculate the area.
+    
+    Methods:
+    area(self): Raises an Exception with the message "area() is not implemented".
+    """
     def area(self):
         """
         Public instance method to calculate the area.
