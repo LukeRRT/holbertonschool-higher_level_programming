@@ -8,6 +8,12 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
 
+    if b == float('inf'):
+        raise OverflowError("cannot convert float infinity to integer")
+
+    if b != b:  # check for NaN
+        raise ValueError("cannot convert float NaN to integer")
+
     # Cast a and b to integers if they are floats
     a = int(a)
     b = int(b)
