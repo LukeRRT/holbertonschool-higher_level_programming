@@ -20,7 +20,6 @@ class Student:
         """
         Retrieves a dictionary representation
         of the Student instance.
-        
         If attrs is a list of strings, only attributes
         names contained in this list will be retrieved.
         Otherwise, all attributes will be retrieved.
