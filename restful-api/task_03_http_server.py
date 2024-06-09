@@ -25,7 +25,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(b"Endpoint not found")  # Ensure this matches the expected test content
+            error_message = b"Endpoint not found"
+            self.wfile.write(error_message)
+            print(f"Sent 404 response: {error_message.decode()}")
 
 def run(server_class=HTTPServer, handler_class=SimpleHTTPRequestHandler, port=8000):
     server_address = ('', port)
